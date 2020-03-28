@@ -7,6 +7,8 @@ root = Tk()
 
 root.title("Clock")
 root.attributes("-fullscreen" , True)  #makes it fullscreen. For test reasons comented so its easier to test
+screenHeight=root.winfo_screenheight()
+screenWidth=root.winfo_screenwidth()
 
 def time():
     timeString = strftime('%H:%M:%S %p')
@@ -20,5 +22,5 @@ lbl = Label(root, font = ('calibri', 100, 'bold'),
 
 lbl.pack(anchor='center')
 time()
-
+print(screenHeight , " ," , screenWidth)
 mainloop()
