@@ -15,17 +15,26 @@ def time():
     lbl.config(text=timeString)
     lbl.after(1000, time)
 
+
 lbl = Label(root, font = ('calibri', 100, 'bold'),
             background = '#cce6ff',
             foreground = 'black')
 
+left = Frame(root, borderwidth=2, relief="solid", background="#cce6ff")
+right = Frame(root, borderwidth=2, relief="solid", background="#cce6ff")
 
 
 
 '''end bit of the programm'''
 
-lbl.pack(anchor='center')
+lbl.pack(anchor='center', side=TOP)
 time()
 print(screenHeight , " ," , screenWidth)
+
+
+
+left.pack(side="left", expand=True, fill="both")
+right.pack(side="right", expand=True, fill="both")
+
 
 mainloop()
